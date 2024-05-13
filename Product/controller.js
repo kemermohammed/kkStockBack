@@ -47,7 +47,7 @@ exports.productCreate = async (req, res, next) => {
 
     let product;
     if (req.file) {
-      const imageName = `http://localhost:3003/${req.file.filename}`;
+      const imageName = `https://kkstockback-2.onrender.com/${req.file.filename}`;
       product = await productModel.create({ productName, imageName });
     } else {
       product = await productModel.create({ productName });
