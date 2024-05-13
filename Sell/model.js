@@ -8,7 +8,7 @@ const sellSchema = mongoose.Schema({
     sellName : String,
     sellQuantity : Number,
     sellPrice : Number,
-    timeSold: {default:Date.now()}
+    timeSold: { type: Date, default: Date.now }
 })
 
 const sellModel = mongoose.model("Sell",sellSchema)
